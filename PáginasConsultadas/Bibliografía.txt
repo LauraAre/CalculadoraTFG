@@ -1,0 +1,5 @@
+Instalación de Node.js (Ya que es un requisito para tener Angular):  https://nodejs.org/es/download/
+Instalación de Angular en Visual Studio Code:  https://angular.dev/installation
+
+
+Anotaciones: Para ejecutar el proyecto de Angular, se puede utilizar el comando ng serve o npm start, ya que los dos lanzan el servidor.
