@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-accesibilidad',
-  imports: [],
+  standalone: true,
   templateUrl: './accesibilidad.component.html',
-  styleUrl: './accesibilidad.component.scss'
+  styleUrls: ['./accesibilidad.component.scss']
 })
 export class AccesibilidadComponent {
 

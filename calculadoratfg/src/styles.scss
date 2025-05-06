@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+$font-family-defecto: 'Roboto';
+$font-family-menu: 'Merriweather';
+$font-family-parrafo: 'Roboto';
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: normal;
+  src: url(assets/fonts/Roboto/static/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-weight: normal;
+  src: url(assets/fonts/Merriweather/static/Merriweather_24pt-Regular.ttf) format('truetype');
+}
+  

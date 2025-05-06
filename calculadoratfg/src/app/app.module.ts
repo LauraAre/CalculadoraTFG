@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './paginas/inicio/inicio.component';
-
-const routes: Routes = [
-  { path: '', component: InicioComponent },
-  { path: 'inicio', component: InicioComponent },
-  { path: '**', redirectTo: 'inicio' },
-  { path: 'header', component: HeaderComponent },
-  { path: 'footer', component: FooterComponent },
-];
+import { ComoFuncionaComponent } from './paginas/como-funciona/como-funciona.component';
+import { AccesibilidadComponent } from './paginas/accesibilidad/accesibilidad.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +15,12 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     InicioComponent,
+    ComoFuncionaComponent,
+    AccesibilidadComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

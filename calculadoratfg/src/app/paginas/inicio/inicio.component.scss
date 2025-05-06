@@ -1,0 +1,16 @@
+$font-family-defecto: 'Roboto';
+$font-family-menu: 'Merriweather';
+$font-family-parrafo: 'Roboto';
+$typography-h2: 42px;
+.fondo{
+    background-image: linear-gradient(to bottom, #A535FF, #2695C3);
+    height: 401px;
+    h2{
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        font-size: $typography-h2;
+        font-family: $font-family-defecto;
+        font-weight: normal;
+    }
+}

@@ -18,9 +18,9 @@ $typography-h3: 30px;
 $typography-h2: 42px;
 $typography-h1: 56px;
 /* string */
-$font-family-defecto: Roboto;
-$font-family-menu: Merriweather;
-$font-family-parrafo: Roboto;
+$font-family-defecto: 'Roboto';
+$font-family-menu: 'Merriweather';
+$font-family-parrafo: 'Roboto';
 
 * {
     margin: 0px;
@@ -28,11 +28,32 @@ $font-family-parrafo: Roboto;
     box-sizing: border-box;
 }
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
 header {
     background-color: $colors-header;
     width: 100%;
-    h1 {
-        padding: 0;
-        margin: 0;
+    font-family: $font-family-menu;
+
+    .items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item1-logo {
+            padding: 10px 0px;
+        }
+
+        .item2-menu {
+            a {
+                padding: 30px;
+            }
+        }
     }
 }
