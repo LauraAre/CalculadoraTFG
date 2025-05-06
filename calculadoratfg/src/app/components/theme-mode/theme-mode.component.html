@@ -1,1 +1,9 @@
-<p>theme-mode works!</p>
+<button
+  class="modo-tema"
+  [class.dark]="esModoOscuro"
+  (click)="cambiarTema()"
+  aria-label="Cambiar tema"
+>
+  <span class="icono"></span>
+</button>
+  

@@ -4,7 +4,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [],
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss']
 })

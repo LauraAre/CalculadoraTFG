@@ -1,0 +1,31 @@
+@use "../../../styles.scss" as *;
+
+.modo-tema {
+    width: 90px;
+    height: 70px;
+    border: none;
+    background-color: $colors-primary-03;
+    border-radius: $border-theme;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icono {
+        width: 32px;
+        height: 32px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-image: url('../../../assets/img/light.png');
+    }
+
+    &.dark {
+        background-color: $colors-secondary-01;
+
+        .icono {
+            background-image: url('../../../assets/img/dark.png');
+        }
+    }
+}

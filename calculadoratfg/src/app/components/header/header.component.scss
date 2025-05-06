@@ -1,27 +1,4 @@
-/* Mode 1 */
-/* color */
-$colors-header: rgb(165 53 255);
-$colors-primary-01: rgb(115 39 174);
-$colors-primary-02: rgb(38 149 195);
-$colors-primary-03: rgb(255 255 255);
-$colors-secondary-01: rgb(32 32 31);
-$colors-secondary-02: rgb(53 53 71);
-$colors-secondary-03: rgb(170 58 185);
-/* number */
-$border-bordes: 15px;
-$grid-grid-small: 4px;
-$grid-grid-medium: 8px;
-$grid-grid-desktop: 12px;
-$typography-parrafos: 16px;
-$typography-menu: 20px;
-$typography-h3: 30px;
-$typography-h2: 42px;
-$typography-h1: 56px;
-/* string */
-$font-family-defecto: 'Roboto';
-$font-family-menu: 'Merriweather';
-$font-family-parrafo: 'Roboto';
-
+@use "../../../styles.scss" as *;
 * {
     margin: 0px;
     padding: 0px;
@@ -53,6 +30,8 @@ header {
         .item2-menu {
             a {
                 padding: 30px;
+                text-decoration: none;
+                color: $colors-secondary-01;
             }
         }
     }

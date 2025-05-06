@@ -1,4 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* colores */
+$colors-header: rgb(165 53 255);
+$colors-primary-01: rgb(115 39 174);
+$colors-primary-02: rgb(38 149 195);
+$colors-primary-03: rgb(255 255 255);
+$colors-secondary-01: rgb(32 32 31);
+$colors-secondary-02: rgb(53 53 71);
+$colors-secondary-03: rgb(170 58 185);
+
+/* bordes */
+$border-bordes: 15px;
+$border-theme: 132px;
+
+/* grid */
+$grid-grid-small: 4px;
+$grid-grid-medium: 8px;
+$grid-grid-desktop: 12px;
+
+/* tamaño letra */
+$typography-parrafos: 16px;
+$typography-menu: 20px;
+$typography-h3: 30px;
+$typography-h2: 42px;
+$typography-h1: 56px;
+
+/* fuente */
 $font-family-defecto: 'Roboto';
 $font-family-menu: 'Merriweather';
 $font-family-parrafo: 'Roboto';
