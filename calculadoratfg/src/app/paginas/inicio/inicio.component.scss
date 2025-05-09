@@ -1,4 +1,5 @@
 @use "../../../styles.scss" as *;
+
 .fondo {
     background-image: linear-gradient(to bottom, #A535FF, #2695C3);
     height: 401px;
@@ -13,6 +14,42 @@
         font-size: $typography-h2;
         font-family: $font-family-defecto;
         font-weight: normal;
-        color: $colors-secondary-01;
+        line-height: 70px;
     }
+}
+
+.secciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+
+    .operaciones-basicas,
+    .reconocimiento-voz,
+    .accesibilidad {
+        display: flex;
+        height: 30%;
+    }
+
+    .parrafos {
+
+        p:nth-child(1) {
+            font-size: $typography-menu;
+            font-family: $font-family-defecto;
+            width: 40%;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-top: 0px;
+        }
+
+        p:nth-child(2) {
+            font-size: $typography-parrafos;
+            font-family: $font-family-menu;
+            width: 50%;
+            margin-top: 0px;
+            margin-left: 30px;
+            line-height: 25px;
+        }
+    }
+
 }

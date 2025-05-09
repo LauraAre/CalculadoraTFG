@@ -2,5 +2,40 @@
     <div class="container">
         <h2> Calculadora Web Con Reconomiento de Voz </h2>
     </div>
+    <div class="calculadora">
 
+    </div>
+</div>
+
+<div class="secciones container">
+    <div class="operaciones-basicas">
+        <div class="imagen1 dark-mode">
+            <img [src]="isDarkMode ? '../../../assets/img/icono-operaciones-dark.png' : '../../../assets/img/icono-operaciones-light.png'" alt="Operaciones básicas">
+        </div>
+        <div class="parrafos">
+            <p class="titulo-operaciones"> Operaciones básicas </p>
+            <p class="parrafo-operaciones"> Realiza sumas, restas, multiplicaciones y divisiones. </p>
+        </div>
+    </div>
+
+    <div class="reconocimiento-voz">
+        <div class="imagen2">
+            <img [src]="isDarkMode ? '../../../assets/img/icono-voz-dark.png' : '../../../assets/img/icono-voz-light.png'" alt="Reconocimiento de voz">
+        </div>
+        <div class="parrafos">
+            <p class="titulo-voz"> Reconocimiento de voz </p>
+            <p class="parrafo-voz"> Dicta comandos para ejecutar operaciones matemáticas.</p>
+        </div>
+    </div>
+
+    <div class="accesibilidad">
+        <div class="imagen3">
+            <img [src]="isDarkMode ? '../../../assets/img/icono-accesibilidad-dark.png' : '../../../assets/img/icono-accesibilidad-light.png'" alt="Accesibilidad">
+        </div>
+        <div class="parrafos">
+            <p class="titulo-accesibilidad"> Accesibilidad </p>
+            <p class="parrafo-accesibilidad"> Calculadora diseñada para un uso accesible. </p>
+        </div>
+
+    </div>
 </div>

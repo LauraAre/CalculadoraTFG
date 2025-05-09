@@ -1,0 +1,12 @@
+@use "../../../styles.scss" as *;
+
+footer {
+    background-color: $colors-header;
+    font-size: $typography-menu;
+    font-family: $font-family-menu;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

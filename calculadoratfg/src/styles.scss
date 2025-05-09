@@ -29,11 +29,11 @@ $font-family-menu: 'Merriweather';
 $font-family-parrafo: 'Roboto';
 
 .container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 16px;
-    box-sizing: border-box;
-  }
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
 
 @font-face {
   font-family: 'Roboto';
@@ -46,4 +46,46 @@ $font-family-parrafo: 'Roboto';
   font-weight: normal;
   src: url(assets/fonts/Merriweather/static/Merriweather_24pt-Regular.ttf) format('truetype');
 }
+
+.light-mode {
+  body {
+    background-color: $colors-primary-03;
+  }
+
+  .fondo h2 {
+    color: $colors-primary-03;
+  }
+
+  header .item2-menu a {
+    color: $colors-primary-03;
+  }
+  p{
+    color: $colors-secondary-01;
+  }
+  footer p{
+    color: $colors-primary-03;
+  }
+
+}
+
+
+.dark-mode {
+  body {
+    background-color: $colors-secondary-02;
+  }
+
+  .fondo h2 {
+    color: $colors-secondary-01;
+  }
+
+  header .item2-menu a {
+    color: $colors-secondary-01;
+  }
+  p{
+    color: $colors-primary-03;
+  }
+  footer p{
+    color: $colors-secondary-01;
+  }
   
+}
