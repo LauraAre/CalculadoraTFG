@@ -1,0 +1,32 @@
+@use "../../../styles.scss" as *;
+
+.fondoFunciona {
+    background-image: linear-gradient(to bottom, #A535FF, #2695C3);
+    height: 711px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
+
+    .parrafosFunciona {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            width: 33%;
+            font-size: $typography-h2;
+            font-family: $font-family-menu;
+            font-weight: normal;
+            line-height: 50px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            color: $colors-secondary-01;
+        }
+        p{
+            width: 33%;
+            margin: 0;
+            font-size: $typography-parrafos;
+            font-family: $font-family-menu;
+        }
+    }
+
+
+}

@@ -1,6 +1,6 @@
 @use "../../../styles.scss" as *;
 
-.fondo {
+.fondoInicio {
     background-image: linear-gradient(to bottom, #A535FF, #2695C3);
     height: 401px;
     justify-content: center;
@@ -45,7 +45,7 @@
         p:nth-child(2) {
             font-size: $typography-parrafos;
             font-family: $font-family-menu;
-            width: 50%;
+            width: 55%;
             margin-top: 0px;
             margin-left: 30px;
             line-height: 25px;
