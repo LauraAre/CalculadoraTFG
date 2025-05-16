@@ -1,1 +1,47 @@
-<p>como-funciona-cards works!</p>
+<div class="container">
+  <div class="items">
+    <div class="item1">
+      <div class="parrafosCards">
+        <p>Modo manual</p>
+        <img [src]="isDarkMode ? '../../../assets/img/icono-manual-cf-dark.png' :
+         '../../../assets/img/icono-manual-cf-light.png'" alt="" class="iconosCards">
+        <p>Utiliza los botones de la calculadora para introducir los números y las operaciones.<br>
+          Haz clic en el botón de "igual" y el resultado se mostrará por pantalla.</p>
+      </div>
+    </div>
+
+    <div class="item2">
+      <div class="parrafosCards">
+        <p>Modo por voz</p>
+        <img [src]="isDarkMode ? '../../../assets/img/icono-voz-cf-dark.png' :
+           '../../../assets/img/icono-voz-cf-light.png'" alt="" class="iconosCards">
+        <p>Activa el micrófono y di en voz alta la operación.<br> La calculadora reconocerá el comando y mostrará el
+          resultado en pantalla.</p>
+      </div>
+
+    </div>
+    <div class="item3">
+      <div class="parrafosCards">
+        <p>¿Qué operaciones reconoce?</p>
+        <img [src]="isDarkMode ? '../../../assets/img/icono-config-cf-dark.png' :
+           '../../../assets/img/icono-config-cf-light.png'" alt="" class="iconosCards">
+        <p>Suma: "más" <br> Resta: "menos" <br> Multiplicación: "por" <br> División: "entre" </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="consejosUso">
+    <img [src]="isDarkMode ? '../../../assets/img/icono-bombilla-cf-dark.png' :
+           '../../../assets/img/icono-bombilla-cf-light.png'" alt="" class="iconosCards">
+    <div class="consejos">
+      <p> Consejos de uso </p>
+      <ul>
+        <li> Habla de forma clara y pausada.</li>
+        <li> Asegurate de que el micrófono esté activado en tu navegador.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>

@@ -2,7 +2,7 @@
 
 .fondoFunciona {
     background-image: linear-gradient(to bottom, #A535FF, #2695C3);
-    height: 711px;
+    height: 830px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
 
     .parrafosFunciona {
@@ -16,8 +16,8 @@
             font-family: $font-family-menu;
             font-weight: normal;
             line-height: 50px;
-            margin-top: 30px;
-            margin-bottom: 40px;
+            margin-top: 20px;
+            margin-bottom: 30px;
             color: $colors-secondary-01;
         }
         p{
@@ -25,6 +25,7 @@
             margin: 0;
             font-size: $typography-parrafos;
             font-family: $font-family-menu;
+            padding-bottom: 20px;
         }
     }
 

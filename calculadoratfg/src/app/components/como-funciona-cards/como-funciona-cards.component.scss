@@ -1,0 +1,71 @@
+@use "../../../styles.scss" as *;
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 75px;
+
+    .item1,
+    .item2,
+    .item3 {
+        background-color: $colors-secondary-03;
+        width: 260px;
+        height: 250px;
+        padding: 10px 20px;
+        border-radius: $border-bordes;
+        position: relative;
+        z-index: 2;
+
+        .parrafosCards {
+            p:nth-child(1) {
+                text-align: center;
+                font-family: $font-family-menu;
+                font-size: $typography-menu;
+                font-weight: 600;
+                z-index: 1;
+                margin-top: 40px;
+            }
+
+            .iconosCards {
+                position: absolute;
+                bottom: 220px;
+                left: 100px;
+                z-index: -1;
+            }
+
+            p:nth-child(3) {
+                font-size: $typography-parrafos;
+                font-family: $font-family-parrafo;
+                line-height: 30px;
+            }
+
+
+        }
+    }
+}
+
+.consejosUso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    .consejos {
+        display: flex;
+        flex-direction: column;
+        font-family: $font-family-menu;
+        p {
+            padding: 0px 25px;
+            display: flex;
+            font-weight: bold;
+            font-size: $typography-menu;
+            margin-bottom: 0;
+        }
+        li{
+            font-size: $typography-parrafos;
+            line-height: 27px;
+        }
+    }
+
+
+}

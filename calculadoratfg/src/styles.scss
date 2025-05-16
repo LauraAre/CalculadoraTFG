@@ -50,6 +50,9 @@ $font-family-parrafo: 'Roboto';
 .light-mode {
   body {
     background-color: $colors-primary-03;
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
 
   .fondo h2 {
@@ -59,13 +62,30 @@ $font-family-parrafo: 'Roboto';
   header .item2-menu a {
     color: $colors-primary-03;
   }
-  p{
+
+  p {
     color: $colors-secondary-01;
   }
-  footer p{
+
+  .parrafosFunciona p {
     color: $colors-primary-03;
   }
-  .parrafosFunciona p {
+
+  .parrafosCards p {
+    color: $colors-primary-03;
+  }
+
+  .consejosUso {
+    p {
+      color: $colors-primary-03;
+    }
+
+    li {
+      color: $colors-primary-03;
+    }
+  }
+
+  footer p {
     color: $colors-primary-03;
   }
 
@@ -75,6 +95,9 @@ $font-family-parrafo: 'Roboto';
 .dark-mode {
   body {
     background-color: $colors-secondary-02;
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
 
   .fondoInicio h2 {
@@ -84,11 +107,21 @@ $font-family-parrafo: 'Roboto';
   header .item2-menu a {
     color: $colors-secondary-01;
   }
-  p{
+
+  p {
     color: $colors-primary-03;
   }
-  footer p{
+
+  .parrafosCards p {
     color: $colors-secondary-01;
   }
-  
+
+  .consejosUso p {
+    color: $colors-secondary-01;
+  }
+
+  footer p {
+    color: $colors-secondary-01;
+  }
+
 }
