@@ -85,10 +85,28 @@ $font-family-parrafo: 'Roboto';
     }
   }
 
+  .tituloAccesibilidad h2 {
+    color: $colors-primary-03;
+  }
+
+  .textosAccesibilidad p {
+    color: $colors-primary-03;
+  }
+
+  .textosAccesibilidad h2 {
+    color: $colors-primary-03;
+  }
+
   footer p {
     color: $colors-primary-03;
   }
 
+  .fondoAccesibilidad {
+    &::after {
+      background-color: $colors-primary-03 !important;
+      // Pongo important para que no me lo sobreescriba el color de accesibilidad.component.scss
+    }
+  }
 }
 
 
@@ -120,8 +138,27 @@ $font-family-parrafo: 'Roboto';
     color: $colors-secondary-01;
   }
 
+  .tituloAccesibilidad h2 {
+    color: $colors-secondary-01;
+  }
+
+  .textosAccesibilidad p {
+    color: $colors-secondary-01;
+  }
+
+  .textosAccesibilidad h2 {
+    color: $colors-secondary-01;
+  }
+
   footer p {
     color: $colors-secondary-01;
+  }
+
+  .fondoAccesibilidad {
+    &::after {
+      background-color: $colors-secondary-02 !important;
+      // Pongo important para que no me lo sobreescriba el color de accesibilidad.component.scss
+    }
   }
 
 }

@@ -1,1 +1,17 @@
-<p>accesibilidad works!</p>
+<div class="fondoAccesibilidad">
+  <div class="tituloAccesibilidad">
+    <h2> Accesibilidad </h2>
+  </div>
+
+  <div class="contenidoAccesibilidad container">
+    <div class="textosAccesibilidad">
+      <h2> Calculadora Web Accesible </h2>
+      <p>La aplicación ha sido diseñada para ser fácil de usar por todas las personas, incluyendo aquellas con visión reducida.</p>
+      <p><span class="txt-bold">Modo claro y modo oscuro:</span> <span class="txt-light">Permite elegir entre dos esquemas de color para adaptarse a distintas condiciones de iluminación</span></p>
+      <p><span class="txt-bold">Interfaz simple:</span> <span class="txt-light">El diseño incluye botones de distintos colores entre los números, las operaciones a realizar, el micrófono de voz, y los resultados o borrar, para facilitar su uso.</span></p>
+    </div>
+    <div class="fotoAccesibilidad">
+      <img [src]="isDarkMode ? '../../../assets/img/icono-access-dark.png' : '../../../assets/img/icono-access-light.png'" alt="Icono Accesibilidad">
+    </div>
+  </div>
+</div>
