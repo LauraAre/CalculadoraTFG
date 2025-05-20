@@ -1,0 +1,80 @@
+@use "../../../styles.scss" as *;
+
+.calculadora {
+    background-color: $colores-fondo;
+    width: 340px;
+    color: $colores-texto;
+    border-radius: $border-bordes;
+    padding: 25px 25px;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: $typography-menu;
+    margin-top: 100px;
+
+    .barra-voz {
+        border: 3px solid $colores-finales;
+        border-radius: $border-bordes;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn-voz {
+            background-color: $colores-voz;
+            color: $colores-texto;
+            height: 64px;
+            border: 0;
+            border-radius: 12px;
+            padding: 22px 22px;
+            box-shadow: 3px 0px 8px #E3E3E3;
+
+            .fas {
+                font-size: 24px;
+            }
+        }
+
+        p {
+            padding: 0px 22px;
+        }
+
+    }
+
+    .teclado {
+        padding-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .btn-numeros {
+            background-color: $colores-numeros;
+            color: $colors-primary-03;
+            border: none;
+            border-radius: $border-bordes;
+            margin: 7px 10px;
+            font-size: $typography-menu;
+            width: 65px;
+            height: 64px;
+        }
+
+        .btn-operadores {
+            background-color: $colores-operadores;
+            color: $colors-primary-03;
+            border: none;
+            border-radius: $border-bordes;
+            margin: 7px 10px;
+            font-size: $typography-menu;
+            width: 65px;
+            height: 64px;
+        }
+        .btn-finales{
+            background-color: $colores-finales;
+            color: $colors-primary-03;
+            border: none;
+            border-radius: $border-bordes;
+            margin: 7px 10px;
+            font-size: $typography-menu;
+            width: 65px;
+            height: 64px;
+        }
+    }
+
+}

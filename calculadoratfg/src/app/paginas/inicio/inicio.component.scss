@@ -7,15 +7,20 @@
     display: flex;
     align-items: center;
 
-    h2 {
-        padding: 0;
-        margin: 0;
-        width: 50%;
-        font-size: $typography-h2;
-        font-family: $font-family-defecto;
-        font-weight: normal;
-        line-height: 70px;
+    .cajaCalculadora {
+        display: flex;
+        align-items: center;
+        h2 {
+            padding: 0;
+            margin: 0;
+            width: 50%;
+            font-size: $typography-h2;
+            font-family: $font-family-defecto;
+            font-weight: normal;
+            line-height: 70px;
+        }
     }
+
 }
 
 .secciones {

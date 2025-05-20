@@ -1,9 +1,10 @@
 import { Component, DoCheck } from '@angular/core';
+import { CalculadoraComponent } from '../../components/calculadora/calculadora.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [],
+  imports: [CalculadoraComponent],
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss']
 })

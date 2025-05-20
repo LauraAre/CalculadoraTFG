@@ -1,3 +1,4 @@
+/* COLORES PRINCIPALES DE LA APLICACIÓN */
 /* colores */
 $colors-header: rgb(165 53 255);
 $colors-primary-01: rgb(115 39 174);
@@ -27,6 +28,22 @@ $typography-h1: 56px;
 $font-family-defecto: 'Roboto';
 $font-family-menu: 'Merriweather';
 $font-family-parrafo: 'Roboto';
+
+/* COLORES DE LA CALCULADORA */
+
+/* colores */
+$colores-finales: rgb(115 39 174);
+$colores-finales-hover: rgb(71 26 106);
+$colores-fondo: rgb(32 32 31);
+$colores-numeros: rgb(53 53 71);
+$colores-numeros-hover: rgb(83 83 102);
+$colores-operadores: rgb(38 149 195);
+$colores-operadores-hover: rgb(23 94 124);
+$colores-texto: rgb(255 255 255);
+$colores-voz: rgb(170 58 185);
+$colores-voz-active: rgb(122 50 132);
+
+
 
 .container {
   width: 90%;
