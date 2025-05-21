@@ -1,14 +1,14 @@
 @use "../../../styles.scss" as *;
 
 .calculadora {
-    background-color: $colores-fondo;
     width: 340px;
     color: $colores-texto;
     border-radius: $border-bordes;
     padding: 25px 25px;
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: $typography-menu;
-    margin-top: 100px;
+    margin-top: 70px;
+    box-shadow: -6px 6px 7px rgba(0, 0, 0, 0.229);
 
     .barra-voz {
         border: 3px solid $colores-finales;
@@ -19,12 +19,15 @@
 
         .btn-voz {
             background-color: $colores-voz;
-            color: $colores-texto;
-            height: 64px;
             border: 0;
             border-radius: 12px;
             padding: 22px 22px;
             box-shadow: 3px 0px 8px #E3E3E3;
+
+            &:active {
+                transform: scale(0.95);
+                background-color: $colores-voz-active;
+            }
 
             .fas {
                 font-size: 24px;
@@ -37,7 +40,7 @@
 
     }
 
-    .teclado {
+    .teclas {
         padding-top: 15px;
         display: flex;
         flex-wrap: wrap;
@@ -45,7 +48,6 @@
         align-items: center;
 
         .btn-numeros {
-            background-color: $colores-numeros;
             color: $colors-primary-03;
             border: none;
             border-radius: $border-bordes;
@@ -53,6 +55,11 @@
             font-size: $typography-menu;
             width: 65px;
             height: 64px;
+            transition: transform 0.2s ease;
+
+            &:active {
+                transform: scale(0.95);
+            }
         }
 
         .btn-operadores {
@@ -64,9 +71,19 @@
             font-size: $typography-menu;
             width: 65px;
             height: 64px;
+            transition: transform 0.2s ease;
+
+            &:active {
+                transform: scale(0.95);
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $colores-operadores-hover;
+            }
         }
-        .btn-finales{
-            background-color: $colores-finales;
+
+        .btn-finales {
             color: $colors-primary-03;
             border: none;
             border-radius: $border-bordes;
@@ -74,6 +91,11 @@
             font-size: $typography-menu;
             width: 65px;
             height: 64px;
+            transition: transform 0.2s ease;
+
+            &:active {
+                transform: scale(0.95);
+            }
         }
     }
 

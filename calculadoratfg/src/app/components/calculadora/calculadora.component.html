@@ -1,25 +1,39 @@
 <div class="calculadora">
     <div class="barra-voz">
-        <button class="btn-voz"><i class="fas fa-microphone" aria-hidden="true"></i></button>
-        <p class="resultado"> 0 </p>
+        <button class="btn-voz" (click)="escucharVoz()">
+            <i class="fas fa-microphone" aria-hidden="true"></i>
+            <div class="mensaje-voz" *ngIf="microActivo">
+        Escuchando...
     </div>
-    <div class="teclado">
-        <button class="btn-numeros">1</button>
-        <button class="btn-numeros">2</button>
-        <button class="btn-numeros">3</button>
-        <button class="btn-operadores">+</button>
-        <button class="btn-numeros">4</button>
-        <button class="btn-numeros">5</button>
-        <button class="btn-numeros">6</button>
-        <button class="btn-operadores">-</button>
-        <button class="btn-numeros">7</button>
-        <button class="btn-numeros">8</button>
-        <button class="btn-numeros">9</button>
-        <button class="btn-operadores">*</button>
-        <button class="btn-finales">C</button>
-        <button class="btn-numeros">0</button>
-        <button class="btn-finales">=</button>
-        <button class="btn-operadores">/</button>
+        </button>
+        <p class="resultado">{{ resultado }}</p>
+        
     </div>
+    
 
+    <!-- Mensaje de error en caso necesario -->
+    <app-mensaje-error [mensaje]="mensajeError"></app-mensaje-error>
+
+    <!-- Calculadora -->
+    <div class="teclas">
+        <button class="btn-numeros" (click)="agregarValor('1')">1</button>
+        <button class="btn-numeros" (click)="agregarValor('2')">2</button>
+        <button class="btn-numeros" (click)="agregarValor('3')">3</button>
+        <button class="btn-operadores" (click)="agregarValor('+')">+</button>
+
+        <button class="btn-numeros" (click)="agregarValor('4')">4</button>
+        <button class="btn-numeros" (click)="agregarValor('5')">5</button>
+        <button class="btn-numeros" (click)="agregarValor('6')">6</button>
+        <button class="btn-operadores" (click)="agregarValor('-')">-</button>
+
+        <button class="btn-numeros" (click)="agregarValor('7')">7</button>
+        <button class="btn-numeros" (click)="agregarValor('8')">8</button>
+        <button class="btn-numeros" (click)="agregarValor('9')">9</button>
+        <button class="btn-operadores" (click)="agregarValor('*')">*</button>
+
+        <button class="btn-finales" (click)="limpiar()">C</button>
+        <button class="btn-numeros" (click)="agregarValor('0')">0</button>
+        <button class="btn-finales" (click)="calcular()">=</button>
+        <button class="btn-operadores" (click)="agregarValor('/')">/</button>
+    </div>
 </div>

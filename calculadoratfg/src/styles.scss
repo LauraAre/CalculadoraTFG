@@ -29,8 +29,8 @@ $font-family-defecto: 'Roboto';
 $font-family-menu: 'Merriweather';
 $font-family-parrafo: 'Roboto';
 
-/* COLORES DE LA CALCULADORA */
 
+/* COLORES DE LA CALCULADORA */
 /* colores */
 $colores-finales: rgb(115 39 174);
 $colores-finales-hover: rgb(71 26 106);
@@ -42,7 +42,6 @@ $colores-operadores-hover: rgb(23 94 124);
 $colores-texto: rgb(255 255 255);
 $colores-voz: rgb(170 58 185);
 $colores-voz-active: rgb(122 50 132);
-
 
 
 .container {
@@ -72,7 +71,7 @@ $colores-voz-active: rgb(122 50 132);
     margin: 0;
   }
 
-  .fondo h2 {
+  .fondoInicio .cajaCalculadora h2 {
     color: $colors-primary-03;
   }
 
@@ -106,17 +105,17 @@ $colores-voz-active: rgb(122 50 132);
     color: $colors-primary-03;
   }
 
-  .textosAccesibilidad p {
-    color: $colors-primary-03;
+  .textosAccesibilidad {
+    p {
+      color: $colors-primary-03;
+    }
+
+    h2 {
+      color: $colors-primary-03;
+    }
+
   }
 
-  .textosAccesibilidad h2 {
-    color: $colors-primary-03;
-  }
-
-  footer p {
-    color: $colors-primary-03;
-  }
 
   .fondoAccesibilidad {
     &::after {
@@ -124,6 +123,41 @@ $colores-voz-active: rgb(122 50 132);
       // Pongo important para que no me lo sobreescriba el color de accesibilidad.component.scss
     }
   }
+
+  .calculadora {
+    background-color: $colors-primary-03;
+
+    .btn-voz {
+      color: $colors-secondary-01;
+      height: 66px;
+    }
+
+    .teclas {
+      .btn-numeros {
+        background-color: $colores-finales;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $colores-finales-hover;
+        }
+      }
+
+      .btn-finales {
+        background-color: $colores-numeros-hover;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $colores-numeros;
+        }
+      }
+    }
+  }
+
+  footer p {
+    color: $colors-primary-03;
+  }
+
+
 }
 
 
@@ -135,7 +169,7 @@ $colores-voz-active: rgb(122 50 132);
     margin: 0;
   }
 
-  .fondoInicio h2 {
+  .fondoInicio .cajaCalculadora h2 {
     color: $colors-secondary-01;
   }
 
@@ -159,16 +193,15 @@ $colores-voz-active: rgb(122 50 132);
     color: $colors-secondary-01;
   }
 
-  .textosAccesibilidad p {
-    color: $colors-secondary-01;
-  }
+  .textosAccesibilidad {
+    p {
+      color: $colors-secondary-01;
+    }
 
-  .textosAccesibilidad h2 {
-    color: $colors-secondary-01;
-  }
+    h2 {
+      color: $colors-secondary-01;
+    }
 
-  footer p {
-    color: $colors-secondary-01;
   }
 
   .fondoAccesibilidad {
@@ -176,6 +209,39 @@ $colores-voz-active: rgb(122 50 132);
       background-color: $colors-secondary-02 !important;
       // Pongo important para que no me lo sobreescriba el color de accesibilidad.component.scss
     }
+  }
+
+  .calculadora {
+    background-color: $colores-fondo;
+
+    .btn-voz {
+      color: $colores-texto;
+      height: 65px;
+    }
+
+    .teclas {
+      .btn-numeros {
+        background-color: $colores-numeros;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $colores-numeros-hover;
+        }
+      }
+
+      .btn-finales {
+        background-color: $colores-finales;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $colores-finales-hover;
+        }
+      }
+    }
+  }
+
+  footer p {
+    color: $colors-secondary-01;
   }
 
 }
