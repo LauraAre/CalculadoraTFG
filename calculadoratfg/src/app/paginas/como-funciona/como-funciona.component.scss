@@ -2,8 +2,9 @@
 
 .fondoFunciona {
     background-image: linear-gradient(to bottom, #A535FF, #2695C3);
-    height: 830px;
+    height: auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
+    padding-bottom: 80px;
 
     .parrafosFunciona {
         display: flex;
@@ -30,4 +31,29 @@
         }
     }
 
+}
+@media (max-width: 1185px) {
+    .fondoFunciona {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 95%);
+    }
+
+    .parrafosFunciona {
+        padding-top: 90px;
+        h2, p {
+            width: 70% !important;
+        }
+    }
+}
+
+@media (max-width: 1268px) {
+    .fondoFunciona {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+    }
+
+    .parrafosFunciona {
+        padding-top: 90px;
+        h2, p {
+            width: 70% !important;
+        }
+    }
 }
