@@ -21,33 +21,41 @@ export class CalculadoraComponent implements OnInit {
 
     if (SpeechRecognition) {
       this.reconocimientoVoz = new SpeechRecognition();
-      this.reconocimientoVoz.lang = 'es-ES';
-      this.reconocimientoVoz.continuous = false;
-      this.reconocimientoVoz.interimResults = false;
+      this.reconocimientoVoz.lang = 'es-ES'; // Idioma en español
+      this.reconocimientoVoz.continuous = false; 
+      this.reconocimientoVoz.interimResults = false; // No quiero resultados intermedios
 
       this.reconocimientoVoz.onresult = (event: any) => {
-        const vozTexto = event.results[0][0].transcript;
-        this.operacion = this.convertirTextoOperacion(vozTexto);
-        this.mensajeError = '';
-        this.calcular();
-      };
+        const vozTexto = event.results[0][0].transcript; // Obtengo el texto sacado de mi API
+        console.log('Texto reconocido:', vozTexto);
+        
+      if (/^\d+\s+\d+$/.test(vozTexto)) {
+    this.operacion = vozTexto.replace(/\s+/, '/');
+  } else {
+    this.operacion = this.convertirTexto(vozTexto); // Convierto el texto de voz a una operación matemática
+  }
 
+  this.mensajeError = '';
+  this.calcular();
+};
+
+      //Manejo de errores, en el caso de que no se pueda reconocer la voz:
       this.reconocimientoVoz.onerror = (event: any) => {
-        this.mensajeError = 'Error al reconocer la voz. Vuelve a intentarlo más tarde.';
+        this.mensajeError = 'Error al reconocer la voz. Vuelve a intentarlo más tarde.'; 
       };
     } else {
-      this.mensajeError = 'Lo siento, este navegador no soporta el reconocimiento de voz.';
+      this.mensajeError = 'Lo siento, este navegador no soporta el reconocimiento de voz.';  
     }
   }
 
-
-
+// Agrego los números o los símbolos a la operación (Botones 0-9, +, -, *, /)
   agregarValor(valor: string) {
     this.operacion += valor;
     this.mensajeError = '';
   }
 
-  limpiar() {
+  // Borrar los datos de la última operación (Botón C)
+  borrarDatos() {
     this.operacion = '';
     this.resultado = '0';
     this.mensajeError = '';
@@ -58,19 +66,19 @@ export class CalculadoraComponent implements OnInit {
       try {
         this.resultado = Function('"use strict"; return (' + this.operacion + ')')().toString();
       } catch (error) {
-        this.mensajeError = 'Operación no válida';
+        this.mensajeError = 'Operación no válida'; //  Si la operación no es válida, se muestra un mensaje de error
       }
       this.mensajeError = '';
     } catch {
-      this.resultado = '0';
-      this.mensajeError = 'No se puede hacer la operación';
+      this.resultado = '0'; 
+      this.mensajeError = 'No se puede hacer la operación'; 
     }
   }
 
 
 
-  microActivo: boolean = false;
 
+  microActivo: boolean = false;
   escucharVoz() {
     if (!this.reconocimientoVoz) {
       this.mensajeError = 'Lo sentimos, el reconocimiento de voz no está disponible';
@@ -90,8 +98,8 @@ export class CalculadoraComponent implements OnInit {
   }
 
 
-// Método para convertir el texto de la voz a una operación matemática (convierte los operadores de texto a símbolos)
-  convertirTextoOperacion(texto: string): string {
+// Convierto los operadores de texto escuchados, a símbolos matemáticos
+  convertirTexto(texto: string): string {
     return texto
       .toLowerCase()
       .replace(/más/g, '+')

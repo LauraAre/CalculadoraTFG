@@ -22,12 +22,7 @@
             border: 0;
             border-radius: 12px;
             padding: 22px 22px;
-            box-shadow: 3px 0px 8px #E3E3E3;
-
-            &:active {
-                transform: scale(0.95);
-                background-color: $colores-voz-active;
-            }
+            box-shadow: 3px 0px 8px #e3e3e3c0;
 
             .fas {
                 font-size: 24px;

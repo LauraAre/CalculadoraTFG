@@ -116,7 +116,6 @@ $colores-voz-active: rgb(122 50 132);
 
   }
 
-
   .fondoAccesibilidad {
     &::after {
       background-color: $colors-primary-03 !important;
@@ -130,6 +129,10 @@ $colores-voz-active: rgb(122 50 132);
     .btn-voz {
       color: $colors-secondary-01;
       height: 66px;
+      &.activo{
+        color: $colors-primary-03;
+        background-color: $colores-voz-active !important;
+      }
     }
 
     .teclas {
@@ -217,6 +220,9 @@ $colores-voz-active: rgb(122 50 132);
     .btn-voz {
       color: $colores-texto;
       height: 65px;
+      &.activo{
+        background-color: $colores-voz-active !important;
+      }
     }
 
     .teclas {

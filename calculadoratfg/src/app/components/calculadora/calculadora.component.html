@@ -1,15 +1,14 @@
 <div class="calculadora">
     <div class="barra-voz">
-        <button class="btn-voz" (click)="escucharVoz()">
+        <button class="btn-voz" (click)="escucharVoz()" [class.activo]="microActivo">
             <i class="fas fa-microphone" aria-hidden="true"></i>
             <div class="mensaje-voz" *ngIf="microActivo">
-        Escuchando...
-    </div>
+                Escuchando...
+            </div>
         </button>
         <p class="resultado">{{ resultado }}</p>
-        
+
     </div>
-    
 
     <!-- Mensaje de error en caso necesario -->
     <app-mensaje-error [mensaje]="mensajeError"></app-mensaje-error>
@@ -31,7 +30,7 @@
         <button class="btn-numeros" (click)="agregarValor('9')">9</button>
         <button class="btn-operadores" (click)="agregarValor('*')">*</button>
 
-        <button class="btn-finales" (click)="limpiar()">C</button>
+        <button class="btn-finales" (click)="borrarDatos()">C</button>
         <button class="btn-numeros" (click)="agregarValor('0')">0</button>
         <button class="btn-finales" (click)="calcular()">=</button>
         <button class="btn-operadores" (click)="agregarValor('/')">/</button>

@@ -6,20 +6,12 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 16px;
-    box-sizing: border-box;
-    justify-content: center;
-}
-
 header {
     background-color: $colors-header;
     width: 100%;
     font-family: $font-family-menu;
     font-size: $typography-menu;
-    
+
     .items {
         display: flex;
         justify-content: space-between;
@@ -35,5 +27,53 @@ header {
                 text-decoration: none;
             }
         }
+    }
+}
+
+.menu-hamburguesa {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+@media (max-width: 824px) {
+    header .items {
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .item1-logo {
+        display: none;
+    }
+
+    .item2-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+
+        a {
+            padding: 8px 20px !important;
+            font-family: $font-family-menu;
+width: 200px;
+            &:nth-child(1) {
+                padding-top: 30px !important;
+            }
+        }
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    .menu-hamburguesa {
+        display: block;
     }
 }

@@ -6,7 +6,12 @@
                 <img src="assets/img/logo.png" alt="logo" />
             </div>
 
-            <nav class="item2-menu">
+            <button class="menu-hamburguesa" (click)="toggleMenu()" aria-label="Menú">
+                
+                <img [src]="isDarkMode ? '../../../assets/img/hamburguesa-dark.png' : '../../../assets/img/hamburguesa-light.png'" alt="">
+            </button>
+
+            <nav class="item2-menu" [class.active]="menuOpen">
                 <a routerLink="/inicio" routerLinkActive="active">Inicio</a>
                 <a routerLink="/como-funciona" routerLinkActive="active">Cómo funciona</a>
                 <a routerLink="/accesibilidad" routerLinkActive="active">Accesibilidad</a>
