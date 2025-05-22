@@ -112,8 +112,13 @@
         padding: 0 16px;
 
         .consejos {
+            p {
+                width: 80%;
+            }
+
             ul {
                 padding: 10px 30px;
+                width: 75%;
             }
         }
     }
