@@ -32,11 +32,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "/calculadoratfg/"
+            "scripts": []
           },
           "configurations": {
             "production": {
+              "baseHref": "/calculadoratfg/",
               "budgets": [
                 {
                   "type": "initial",
