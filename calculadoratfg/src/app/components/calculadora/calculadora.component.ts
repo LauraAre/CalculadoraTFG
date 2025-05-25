@@ -62,19 +62,16 @@ export class CalculadoraComponent implements OnInit {
   }
 
   calcular() {
-    try {
-      try {
-        this.resultado = Function('"use strict"; return (' + this.operacion + ')')().toString();
-      } catch (error) {
-        this.mensajeError = 'Operación no válida'; //  Si la operación no es válida, se muestra un mensaje de error
-      }
-      this.mensajeError = '';
-      this.decirResultado(this.resultado);
-    } catch {
-      this.resultado = '0';
-      this.mensajeError = 'No se puede hacer la operación';
-    }
+  try {
+    const res = Function('"use strict"; return (' + this.operacion + ')')();
+    this.resultado = res.toString();
+    this.mensajeError = '';
+    this.decirResultado(this.resultado);
+  } catch (error) {
+    this.resultado = '0';
+    this.mensajeError = 'Operación no válida';
   }
+}
 
   microActivo: boolean = false;
   escucharVoz() {
