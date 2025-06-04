@@ -12,6 +12,7 @@ export class CalculadoraComponent implements OnInit {
 
   operacion: string = '';
   resultado: string = '0';
+  mostrarOperacion: string = '0';
   mensajeError: string = ''; // Usado para mostrar errores en <app-mensaje-error>
 
   reconocimientoVoz: any; // Variable para el reconocimiento de voz
@@ -51,6 +52,7 @@ export class CalculadoraComponent implements OnInit {
   // Agrego los números o los símbolos a la operación (Botones 0-9, +, -, *, /)
   agregarValor(valor: string) {
     this.operacion += valor;
+    this.mostrarOperacion = this.operacion;
     this.mensajeError = '';
   }
 
@@ -58,6 +60,7 @@ export class CalculadoraComponent implements OnInit {
   borrarDatos() {
     this.operacion = '';
     this.resultado = '0';
+    this.mostrarOperacion = '0';
     this.mensajeError = '';
   }
 
@@ -65,10 +68,12 @@ export class CalculadoraComponent implements OnInit {
   try {
     const res = Function('"use strict"; return (' + this.operacion + ')')();
     this.resultado = res.toString();
+    this.mostrarOperacion = this.resultado;
     this.mensajeError = '';
     this.decirResultado(this.resultado);
   } catch (error) {
     this.resultado = '0';
+    this.mostrarOperacion = '0';
     this.mensajeError = 'Operación no válida';
   }
 }
